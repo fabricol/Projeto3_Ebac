@@ -1,0 +1,380 @@
+<!-- utilizado para aprendizagem de navbar e criação de abas. inserção do conceito de toasts -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paulistão</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Pacifico&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Pacifico&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./lib/bootstrap.min.css">
+    <style>
+        .navbar-nav .nav-link.active {
+            color: #fff;
+        }
+        .nav-link{
+            text-align: center;
+        }
+
+        header img{
+            height:250px;
+        }
+        .carousel-inner { 
+            height: 250px;
+        }
+        h2, h3, .navbar, #social {
+            font-family: "Oswald", sans-serif;
+        }
+        
+        .btn-success {
+            margin-top: 8px;
+        }
+        #carro {
+            padding-top: 6px;
+            padding-bottom: 6px;
+        }
+
+        .social-links li{
+            list-style: none;
+            display: inline;
+            
+        }
+        .text-colored {
+            font-weight: bold;
+        }
+
+        .social-links a{
+            text-decoration: none;
+        }
+        #escudos1 {
+            height: 72.6px;
+            width: 72.6px;
+        }
+
+        tbody {
+            font-family: "Montserrat", sans-serif;
+        }
+        @media (max-width: 767px) {
+            .carousel-item img {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="cabecalho">
+        <div class="navbar navbar-expand-lg">
+            <h1>Paulistão 2024</h1>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="collapse navbar-collapse justify-content-end" id="menu">
+                <ul class="nav navbar-nav nav-pills ">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#sobre">
+                            <i class="bi bi-house-door me-1"></i>
+                            Sobre
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cardapio">
+                            <i class="bi bi-list"></i>
+                            Partidas
+                        </a>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="nav-link" href="#localizacao">
+                            <i class="bi bi-table"></i>
+                            
+                            Tabela
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato">
+                            <i class="bi bi-telephone"></i>
+                            Fale Conosco
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div id="carousel-exemplo" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div data-bs-interval="3000" class="carousel-item active"> 
+                <img class="img-fluid d-block w-100" src="./img/estadio1.jpg"/>
+                <div class="carousel-caption">
+                </div>
+            </div>
+            <div data-bs-interval="3000" class="carousel-item"> 
+                <img class="img-fluid d-block w-100" src="./img/estadio2.jpg"/>
+                <div class="carousel-caption">
+                </div>
+            </div>
+            <div  data-bs-interval="3000" class="carousel-item"> 
+                <img class="img-fluid d-block w-100" src="./img/estadio3.jpg">
+                <div class="carousel-caption">
+                </div>
+            </div>
+        </div>
+        <button data-bs-target="#carousel-exemplo"  data-bs-slide="prev" class="carousel-control-prev" type="button">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button data-bs-target="#carousel-exemplo"  data-bs-slide="next" class="carousel-control-next" type="button">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carousel-exemplo" class="active" data-bs-slide-to="0"></button>
+            <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="2"></button>
+        </div>
+    </div>
+    
+    <div class="pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="./img/paulistao.jpg" class="d-block w-100 rounded" alt="imagem">
+                </div>
+                <div class="col-md-6">
+                    <h2>Sobre</h2>
+                    <p>
+                        O Campeonato Paulista de Futebol, mais conhecido como Campeonato Paulista ou ainda Paulistão, é a competição profissional desse esporte no estado de São Paulo. Organizada pela Federação Paulista de Futebol, desde 1941, é a liga de futebol mais antiga do Brasil, sendo realizada ininterruptamente desde 1902.
+                    </p>
+                    <h3>Participantes da competição este ano!</h3>
+                    <p>
+                        <ul>
+                            <li class="text-colored">
+                                Água Santa
+                            </li>
+                            <li class="text-colored">
+                                Botafogo
+                            </li>
+                            <li class="text-colored">
+                                Corinthians
+                            </li>
+                            <li class="text-colored">
+                                Guarani
+                            </li>
+                            <li class="text-colored">
+                                Inter de Limeira
+                            </li>
+                            <li class="text-colored">
+                                Ituano
+                            </li>
+                            <li class="text-colored">
+                                Mirassol
+                            </li>
+                            <li class="text-colored">
+                                Novorizontino
+                            </li>
+                            <li class="text-colored">
+                                Palmeiras
+                            </li>
+                            <li class="text-colored">
+                                Red Bull Bragantino
+                            </li>
+                            <li class="text-colored">
+                                Santos
+                            </li>
+                            <li class="text-colored">
+                                São Bernardo
+                            </li>
+                            <li class="text-colored">
+                                São Paulo
+                            </li>
+                            <li class="text-colored">
+                                Santo André
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+        <section id="cardapio">
+            <div class="container ">
+                <div class="row">
+                    <h2 class="section-title text-center mb-3">
+                        <span class="text-colored ">Partidas</span>
+                    </h2>
+                </div>
+                <div class="row">
+                    <aside class="col-md-2">
+                        <nav class="nav pills  nav-cardapio">
+                            <button data-bs-toggle="tab" data-bs-target="#comidas" class="fw-bold text-start text-colored nav-link active btn btn-outline-primary" type="button">Rodada 12 de 12</button>
+                            <button data-bs-toggle="tab" data-bs-target="#sobremesas" class="fw-bold text-start text-colored nav-link btn btn-outline-primary" type="button">Quartas de final   </button>
+                        </nav>
+                    </aside>
+                    <div class="col-md-10">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="comidas">
+                                <div class="row">
+                                    <div class="col-md-4 border border-dark " >
+                                        <span class="d-flex justify-content-evenly mb-1 mt-1">
+                                            <img class="d-block w-25 " src="./img/santos.png" alt="">
+                                            <img class="d-block w-25 " src="./img/AAInternacional.png" alt="">
+                                        </span>
+                                    </div>
+                                    <div class="col-md-4 border border-dark " >
+                                        <span class="d-flex justify-content-evenly mb-1 mt-1">
+                                            <img class="d-block w-25 " src="./img/bragantino.png" alt="">
+                                            <img class="d-block w-25 " src="./img/plameiras.png" alt="">
+                                        </span>
+                                    </div>
+                                    <div class="col-md-4 border border-dark " >
+                                        <span class="d-flex justify-content-evenly mb-1 mt-1">
+                                            <img class="d-block w-25 " src="./img/portuguesa.png" alt="">
+                                            <img class="d-block w-25 " src="./img/guarani.png" alt="">
+                                        </span>
+                                    </div>
+                                    <div class="col-md-4 border border-dark " >
+                                        <span class="d-flex justify-content-evenly mb-1 mt-1">
+                                            <img class="d-block w-25 " src="./img/portuguesa.png" alt="">
+                                            <img class="d-block w-25 " src="./img/guarani.png" alt="">
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="sobremesas">
+                                <div class="row">
+                                    <div class="col-md-6 border border-dark " >
+                                        <span class="d-flex justify-content-evenly" >
+                                            <img class="d-block w-25 mb-3 mt-3" src="./img/santos.png" alt="">
+                                            <img class="d-block w-25 mb-3 mt-3" src="./img/plameiras.png" alt="">
+                                        </span>
+                                    </div>
+                                    <div class="col-md-6 border border-dark " >
+                                        <span class="d-flex justify-content-evenly">
+                                            <img class="d-block w-25 mb-3 mt-3" src="./img/portuguesa.png" alt="">
+                                            <img class="d-block w-25 mb-3 mt-3" src="./img/santos.png" alt="">
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                   
+                </div>
+            </div>
+        </section>
+        <section id="localizacao">
+            <div class="container">
+                <div class="row mt-3 mb-3" id="carro">
+                    <h2 class="section-title text-center ">
+                        <span class="text-colored mb-10 mt-10">Tabela do campeonato</span>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Colocação</th>
+                                    <th scope="col">Clube</th>
+                                    <th scope="col">Pts</th>
+                                    <th scope="col">PJ</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Palmeiras</td>
+                                    <td>25</td>
+                                    <td>11</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Santos</td>
+                                    <td>22</td>
+                                    <td>11</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Bragantino</td>
+                                    <td>21</td>
+                                    <td>11</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>Inter de Limeira</td>
+                                    <td>19</td>
+                                    <td>11</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">5</th>
+                                    <td>Ituano</td>
+                                    <td>18</td>
+                                    <td>11</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">6</th>
+                                    <td>Santos</td>
+                                    <td>17</td>
+                                    <td>11</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">7</th>
+                                    <td>São Paulo</td>
+                                    <td>14</td>
+                                    <td>11</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">8</th>
+                                    <td>Corinthians</td>
+                                    <td>12</td>
+                                    <td>11</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </h2>
+                </div>
+            </div>    
+        </section>
+        <section id="contato">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>Fale conosco</h2>
+                        <form>
+                            <label class="form-label" for="nome" >Seu nome:</label>
+                            <input class="form-control form-control-lg" type="text" id="nome">
+                            <label class="form-label" for="email" >E-mail:</label>
+                            <input class="form-control form-control-lg" type="email" id="email">
+                            <label class="form-label" for="tel" >Telefone:</label>
+                            <input class="form-control form-control-lg" type="tel" id="tel" placeholder="(11)900000000" >
+                            <label class="form-label" for="text" >Fale Conosco:</label>
+                            <input class="form-control form-control" type="text" id="texto" >
+                            <button class="btn btn-success">Enviar</button>
+                        </form>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="section-title fs-4 text-colored" id="social">Redes Sociais</div>
+                            <ul class="social-links">
+                                <li class="fs-5">
+                                    <a href="#">
+                                        <i class="bi bi-facebook"></i>
+                                    </a>
+                                </li>
+                                <li class="fs-5 ms-1 me-1">
+                                    <a href="#">
+                                        <i class="bi bi-instagram"></i>
+                                    </a>
+                                </li>
+                                <li class="fs-5">
+                                    <a href="#">
+                                        <i class="bi bi-whatsapp"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="./lib/bootstrap.bundle.min.js"></script>
+</body>
+</html>
